@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Listing from './components/Listing'
+import Navbar from './components/Navbar'
+import data from './components/data'
 
-function App() {
+function App()
+{
+  const jsxListings = data.map((temp)=>
+  {
+    return (
+      <Listing
+      key={temp.id}
+      item={temp}
+    />
+    )
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='colFlex'>
+      <Navbar/>
+      {jsxListings}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
