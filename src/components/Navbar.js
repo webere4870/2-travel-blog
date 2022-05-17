@@ -3,8 +3,8 @@ import React from "react";
 function Navbar()
 {
     return (
-        <div>
-            <h1>Navbar</h1>
+        <div className="navBar">
+            <i class="fas fa-globe-americas"></i><h1>Travel Journal</h1>
         </div>
     )
 }
